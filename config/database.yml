@@ -50,6 +50,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: new_tasklist_production
   username: new_tasklist
   password: <%= ENV['NEW_TASKLIST_DATABASE_PASSWORD'] %>
